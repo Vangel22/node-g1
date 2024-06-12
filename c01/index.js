@@ -242,6 +242,7 @@ function determineGrade(score1, score2, score3) {
   // total
   // prosek
 }
+
 // 5 + 5 + 5 = 15
 //3 -> Nedovolen
 // 6 -> Dovolen
