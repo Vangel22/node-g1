@@ -52,8 +52,16 @@ const sortDecByName = users.sort((a, b) => {
 // console.log(sortDecByName);
 
 const filterOlderThanThirty = users.filter((user) => user.age >= 30);
+// .filter((user) => user.age > 33);
+const olderThanThirtyThree = filterOlderThanThirty.filter(
+  (user) => user.age > 33
+);
 console.log(filterOlderThanThirty);
 
 // Vezba
 // najdete gi korisnicite koj se 25 godini - SITE
 // najdi gi korisnicite pomegju 20 i 30 godini
+
+// Seckanje na nizata vo JS
+// slice
+// splice
