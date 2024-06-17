@@ -1,0 +1,20 @@
+{
+  "name": "chas2",
+  "version": "1.0.0",
+  "description": "chas2 vo tek",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semos": "Hello students!",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "aplikacija",
+    "za",
+    "naracki"
+  ],
+  "author": "Vangel",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
