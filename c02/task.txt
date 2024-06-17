@@ -1,0 +1,6 @@
+1. Find the first user who is older than 25.
+2. Create a new array with the names of the users
+3. Print each user name and age
+4. Calculate the total age of all users
+5. Sort the users age ascending order 
+6. Get users older than 30
