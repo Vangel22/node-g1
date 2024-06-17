@@ -54,6 +54,6 @@ const sortDecByName = users.sort((a, b) => {
 const filterOlderThanThirty = users.filter((user) => user.age >= 30);
 console.log(filterOlderThanThirty);
 
-// Za doma vezba
+// Vezba
 // najdete gi korisnicite koj se 25 godini - SITE
 // najdi gi korisnicite pomegju 20 i 30 godini
