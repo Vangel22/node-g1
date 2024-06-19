@@ -1,0 +1,13 @@
+Naprevete opcija za append t.e da dodavame tekst vo fajlot namesto da go prezapisuvame toa sto veke go ima
+
+pr.
+
+Vangel Hristov
+24
+Strumica
+
+Napisete edna callback funkcija.
+
+Da se izvezbaat modulite
+Da se instalira paket (bilo koj)
+Da go deinstalirate
