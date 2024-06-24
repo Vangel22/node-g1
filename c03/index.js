@@ -119,7 +119,8 @@ callback(carName, "Audi");
 // probajte so fajl sto ne postoi za da vidite greska
 readFile("data.txt")
   .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+  .catch((err) => console.log(err))
+  .finally(() => console.log("hello guys"));
 
 writeFile("data.txt", "Zdravo studenti, jas sum Vangel!");
 
