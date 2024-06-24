@@ -7,8 +7,11 @@
 
 // CommonJS - module.exports/require , ES modules - exports/import
 
-const { readFile, writeFile } = require("./files");
-const { semos, test } = require("./test");
+const { readFile, writeFile } = require("./files"); // local
+const { semos, test } = require("./test"); // local
+const http = require("http"); // core
+const express = require("express"); // third party
+
 // import { semos, test } from "./test"
 
 // Object destructuring
