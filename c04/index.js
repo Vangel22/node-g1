@@ -80,6 +80,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(10001, () => {
+server.listen(10000, () => {
   console.log("Server started!");
 });
