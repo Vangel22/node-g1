@@ -1,0 +1,5 @@
+1. Dopolnite so mnozenje i delenje kalkulatorot
+2. Iskoristete gi funkciite za konverzija koi gi pravevme na casot
+ 
+ Pr. url : /milestokm/10
+ Pr. url : /celsiustofahr/10
