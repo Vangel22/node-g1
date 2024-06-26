@@ -40,10 +40,10 @@
     - Password example: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
     - Explanation:
         ^: Denotes the start of the string.
-        (?=._[a-z]): Requires at least one lowercase letter.
-        (?=._[A-Z]): Requires at least one uppercase letter.
-        (?=._\d): Requires at least one digit.
-        (?=._[@$!%*?&]): Requires at least one special character among @$!%*?&.
+        (?=.*[a-z]): Requires at least one lowercase letter.
+        (?=.*[A-Z]): Requires at least one uppercase letter.
+        (?=.*\d): Requires at least one digit.
+        (?=.*[@$!%*?&]): Requires at least one special character among @$!%*?&.
         [A-Za-z\d@$!%\*?&]{8,}: Matches a combination of uppercase letters, lowercase letters, digits, and specified special characters with a minimum length of 8 characters.
         $: Denotes the end of the string.
 
