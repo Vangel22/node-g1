@@ -7,6 +7,9 @@ function test(req, res) {
 }
 
 function handleUser(req, res, username) {
+  // dodadete specijalni znaci
+  // maksimum 20 karakteri
+  // barem edna golema bukva
   const usernamePattern = /^[a-zA-Z0-9_]{3,}/; // Vangel123
   //   const usernamePattern = new RegExp("^[a-zA-Z0-9_]{3,}");
   if (usernamePattern.test(username)) {
