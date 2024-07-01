@@ -4,6 +4,7 @@
 // Infrastrukturen kod
 const express = require("express");
 const { postHandler, searchHandler } = require("./handlers/handler");
+const { getStudents } = require("./handlers/students");
 
 const app = express();
 
@@ -58,6 +59,7 @@ app.get("/", authenticate, (req, res) => {
 
 app.get("/search", searchHandler);
 app.get("/post/:op/:numOne/:numTwo", postHandler); //:id ni znaci dinamicen parametar
+app.get("/students/:id", getStudents);
 
 app.listen(3000, () => console.log("Server started at port 3000!"));
 
