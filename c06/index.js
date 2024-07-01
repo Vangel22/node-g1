@@ -3,7 +3,7 @@
 
 // Infrastrukturen kod
 const express = require("express");
-const { postHandler, searchHandler } = require("./handlers/students");
+const { postHandler, searchHandler } = require("./handlers/handler");
 
 const app = express();
 
@@ -57,7 +57,6 @@ app.get("/", (req, res) => {
 
 app.get("/search", searchHandler);
 app.get("/post/:op/:numOne/:numTwo", postHandler); //:id ni znaci dinamicen parametar
-//pathname
 
 app.listen(3000, () => console.log("Server started at port 3000!"));
 
