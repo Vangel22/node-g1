@@ -61,6 +61,34 @@ app.get("/search", searchHandler);
 app.get("/post/:op/:numOne/:numTwo", postHandler); //:id ni znaci dinamicen parametar
 app.get("/students/:id", getStudents);
 
+// app.get(
+//   "/students/:studentId",
+//   (req, res) => {
+//     const studentId = req.params.studentId;
+//     const studentName = req.query.name; // Alice
+
+//     const student = students.find(
+//       (student) => student.id === Number(studentId)
+//     );
+
+//     // Ako ne najdeme student student ke bide undefined
+//     if (!student) {
+//       return res.status(404).send("Student not found!");
+//     }
+
+//     console.log("name", studentName);
+//     // Ako vo query imame ime na student i proveruvam dali najdeniot student go ima istoto ime
+//     if (
+//       studentName &&
+//       student.name.toLowerCase() !== studentName.toLowerCase()
+//     ) {
+//       return res.status(404).send("Student not found with provided name!");
+//     }
+
+//     return student;
+//   }
+// );
+
 app.listen(3000, () => console.log("Server started at port 3000!"));
 
 // Controllers/handlers
