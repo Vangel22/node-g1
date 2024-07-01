@@ -1,0 +1,2 @@
+1. Napravete express app
+2. Implementirajte go kalkulatorot koj go napravivme prethodniot chas
