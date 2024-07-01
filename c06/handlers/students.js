@@ -6,4 +6,6 @@
 //   ];
 // Kade id ke bide param a imeto ke bide query
 
-const getStudents = () => {};
+const getStudents = () => {
+  return res.send(studentName);
+};

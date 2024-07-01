@@ -17,7 +17,7 @@ const app = express();
 // app.delete(); // DELETE
 
 function authenticate(req, res, next) {
-  const isLoggedIn = true; // Simulacija za logiran korisnik
+  const isLoggedIn = false; // Simulacija za logiran korisnik
   if (isLoggedIn) {
     next();
   } else {
@@ -25,7 +25,8 @@ function authenticate(req, res, next) {
   }
 }
 
-app.use(authenticate);
+// app.use("/search", authenticate); // ova se misli za site ruti koi sodrzat /search
+// app.use(authenticate); // Ova se misli za site ruti koi se pobarani
 
 app.use((req, res, next) => {
   console.log(`
@@ -36,7 +37,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
+app.get("/", authenticate, (req, res) => {
   // query
   // params
 
