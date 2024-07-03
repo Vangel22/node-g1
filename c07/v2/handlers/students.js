@@ -1,5 +1,11 @@
 const { read, write } = require("../read-write");
 
+// HINT: studentIndex e req.params.NESTO
+// NESTO e toa sto vie ke go stavite vo rutata
+// pr. /students/:index kade NESTO=:index
+
+// studentData e req.body
+
 // Create student
 // POST METHOD
 // req.body ni e isto sto bese studentData
