@@ -1,7 +1,9 @@
+// Application code
 const fs = require("fs");
 // get
 // rezultatot od 1 + 2
 
+// GET /calculator
 const getCalculator = async (req, res) => {
   try {
     let output = await parseTemplate("calculator_form");
@@ -17,20 +19,20 @@ const getCalculator = async (req, res) => {
 // kalkuliraj
 
 const postCalculator = async (req, res) => {
-  const { a, b, op } = req.body;
+  const { numOne, numTwo, operacija } = req.body;
 
-  if (a === "" || b === "") {
+  if (numOne === "" || numTwo === "") {
     return res.status(400).send("Bad request!");
   }
 
   let result = "";
 
-  switch (op) {
+  switch (operacija) {
     case "sobiranje":
-      result = `${Number(a) + Number(b)}`;
+      result = `${Number(numOne) + Number(numTwo)}`;
       break;
     case "odzemanje":
-      result = `${Number(a) - Number(b)}`;
+      result = `${Number(numOne) - Number(numTwo)}`;
       break;
   }
 
@@ -54,6 +56,7 @@ const postCalculator = async (req, res) => {
 
 // Parse template - za da procitame fajl
 const parseTemplate = async (template, data = null) => {
+  // data e null koga go povikuvame getCalculator
   return new Promise((resolve, reject) => {
     fs.readFile(
       `${__dirname}/../views/${template}.html`,
@@ -61,14 +64,18 @@ const parseTemplate = async (template, data = null) => {
       (err, content) => {
         if (err) reject(err);
 
+        // __dirname ni e folderot vo koj momentalno se naogajame so nasiot fajl (calculator.js)
         // null ne e true
         // if(null) {
         //     console.log("here i am true?")
         // }
 
         if (data) {
+          // koga ke ja povikame linija 40 parseTemplate("calculator.html", { podatok: 11, ime: "Semos" })
           console.log("data", data);
           for (d in data) {
+            // { podatok: '13', ime: 'Semos' }
+
             // prva iteracija data vo calculator.html
             // vtora iteracija ime vo calculator.html
             console.log("d", d);
