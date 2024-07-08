@@ -6,6 +6,8 @@ const createStudent = async (studentData) => {
   await write(students);
 };
 
+// createStudent({ ime: "Pero" });
+
 // Update student
 const updateStudent = async (studentIndex, studentData) => {
   let students = await read();

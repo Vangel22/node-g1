@@ -12,7 +12,7 @@ const read = async () => {
 
   // Statusi: pending, fullfiled, rejected
   return new Promise((success, fail) => {
-    fs.readFile("data.json", "utf8", (err, data) => {
+    fs.readFile("dat.json", "utf8", (err, data) => {
       if (err) return fail(err);
       data = JSON.parse(data);
       // Od JSON vo objekt

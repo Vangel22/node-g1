@@ -8,8 +8,10 @@ const {
 async function main() {
   const students = await getStudents();
 
+  // CRUD - Create, Read, Update, Delete
+
   //   await createStudent({ ime: "Ace", prezime: "Acevski" });
-  //   await deleteStudent(1);
+  // await deleteStudent(1);
 
   await updateStudent(0, { ime: "Petre", godina: 2000 });
   await updateStudent(1, { ime: "Aleksandar", godina: 1999 });
