@@ -5,6 +5,8 @@ const { getCalculator, postCalculator } = require("./handlers/calculator");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+// app.use(express.json()); // Ako sakame da koristime JSON vo req.body
+
 // ako e false nema opcija za vgnezdeni objekti i nizi
 
 // qs

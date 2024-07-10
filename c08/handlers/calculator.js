@@ -108,6 +108,35 @@ const parseTemplate = async (template, data = null) => {
 
 // __dirname ni e momentalniot folder kade sto se naogja ovoj fajl
 
+// OD CAS 9
+// template ke bide ili calculator ili calculator_form
+
+// const parseTemplate = async (template, data = null) => {
+//   // template = calculator_form -> GET
+//   // template = calculator -> POST -> req.body
+//   return new Promise((resolve, reject) => {
+//     fs.readFile(
+//       `${__dirname}/../views/${template}.html`,
+//       "utf-8",
+//       (err, content) => {
+//         if (err) reject(err);
+
+//         if (data) {
+//           for (d in data) {
+//             // d = podatok
+//             // d = ime
+//             // {{podatok}} => data.podatok
+//             // {{ime}} => data.ime
+//             content = content.replace(`{{${d}}}`, data[d]);
+//           }
+//         }
+
+//         return resolve(content);
+//       }
+//     );
+//   });
+// };
+
 module.exports = {
   getCalculator,
   postCalculator,
