@@ -70,21 +70,23 @@ app.get("/", (req, res) => {
 });
 
 app.get("/posts", (req, res) => {
-  let data = [
-    {
-      title: "Hello World",
-      content: "Zdravo na site",
-    },
-    {
-      title: "Hello World 2",
-      content: "Zdravo na site 2",
-    },
+  let data = {
+    posts: [
+      {
+        title: "Hello World",
+        content: "Zdravo na site",
+      },
+      {
+        title: "Hello World 2",
+        content: "Zdravo na site 2",
+      },
 
-    {
-      title: "Hello World 3",
-      content: "Zdravo na site 3",
-    },
-  ];
+      {
+        title: "Hello World 3",
+        content: "Zdravo na site 3",
+      },
+    ],
+  };
 
   res.render("posts", data);
 });
