@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Ke go zeme header.ejs i ke go prikaci na "title" kade title ke go zameni so ime  -->
+    <%- include('partials/header', { title: ime }) %>
+
     <h3>Име: <%= ime %> <%= prezime %> </h3>
     <ul>
         <% niza.forEach(grad => { %>
@@ -41,17 +44,19 @@
             <th>Method</th>
         </tr>
         <% recepti.forEach(recept => { %>
+            <!-- <%- include('partials/recept', { recept: recept }) %> -->
             <tr>
                 <th><%= recept.id %></th>
                 <th><%= recept.recipe %></th>
                 <th>
-
+            
                     <ul>
                         <% for(let ingredient in recept.ingredients) { %>
                             <li> <%= ingredient %>: <%= recept.ingredients[ingredient] %> </li>
                         <% } %>
                     </ul>
                 </th>
+                <!-- Popravete go ova spored primerot pogore -->
                 <th>
                     <ol>
                         <li><%= recept.method.firstStep %> </li>
