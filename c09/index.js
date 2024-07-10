@@ -5,6 +5,7 @@ const app = express();
 app.set("view engine", "ejs");
 // Napravivme konfiguracija da rabotat nasite handleri so ejs
 
+// Linija 47 vo index.ejs <!-- <%- include('partials/recept', { recept: recept }) %> -->
 app.get("/", (req, res) => {
   let data = {
     ime: "Pero",
@@ -67,5 +68,38 @@ app.get("/", (req, res) => {
   res.render("index", data);
   // ovoj index referencira na index.ejs vo views folderot
 });
+
+app.get("/posts", (req, res) => {
+  let data = [
+    {
+      title: "Hello World",
+      content: "Zdravo na site",
+    },
+    {
+      title: "Hello World 2",
+      content: "Zdravo na site 2",
+    },
+
+    {
+      title: "Hello World 3",
+      content: "Zdravo na site 3",
+    },
+  ];
+
+  res.render("posts", data);
+});
+
+app.get("/company", (req, res) => {
+  let data = {
+    companyName: "Semos",
+    category: "IT and Education",
+  };
+
+  res.render("company", data);
+});
+
+// Zadaca
+// 1. Prikazete gi site postovi na /posts
+// 2. Prikazete na /company vo partial title i kategorija
 
 app.listen(3000, () => console.log("Server started at port 3000"));
