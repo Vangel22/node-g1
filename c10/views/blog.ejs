@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .post-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px; 
+        }
+        .post {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        .delete-btn {
+            background-color: red;
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <div class="post-container">
+        <% data.forEach((blog, i) => { %>
+            <div class="post">
+                <h1> <%= blog.title %> </h1>
+                <p> <%= blog.content %> </p>
+                <a class="delete-btn" href="/brishi?i=<%= i %>" >Бриши</a>
+                <!-- zadaca: napravete go ova so id -->
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

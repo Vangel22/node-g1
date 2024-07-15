@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 10px
+        }
+
+        .input {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+
+        .button {
+            cursor: pointer;
+            background-color: greenyellow;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .button:hover {
+            background-color: rgb(128, 189, 35);
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <form class="form" action="/form" method="post">
+        <input class="input" name="title" placeholder="Наслов" />
+        <textarea class="input" name="content" placeholder="Вашата содржина"></textarea> 
+        <button class="button" type="submit">Постирај</button>
+    </form>
+</body>
+</html>
