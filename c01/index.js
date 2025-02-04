@@ -11,11 +11,13 @@ function greetMe() {
     // sekogas ke se izvrsuva
     const test = 10;
     let test1 = 11;
+    var test2 = 12;
     console.log("test", test);
     console.log("test1", test1);
   }
   //   console.log("test", test);
   //   console.log("test1", test1);
+  console.log("test2", test2);
 }
 
 // greetMe();
